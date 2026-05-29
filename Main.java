@@ -1,9 +1,11 @@
+import gui.UnoJFrame;
+
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
     public static void main(String [] args) {
-        JFrame frame = new JFrame();
-        frame.setSize(640, 480);
-        frame.setVisible(true);
+        UnoJFrame unoGame = new UnoJFrame();
+        unoGame.setVisible(true);
     }
 }

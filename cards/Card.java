@@ -1,3 +1,5 @@
+package cards;
+
 public abstract class Card {
 
     private final int number;
@@ -7,5 +9,7 @@ public abstract class Card {
         this.number = number;
         this.color = color;
     }
+
+
     
 }
