@@ -9,7 +9,5 @@ public abstract class Card {
         this.number = number;
         this.color = color;
     }
-
-
     
 }
