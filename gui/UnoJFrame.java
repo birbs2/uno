@@ -1,5 +1,7 @@
 package gui;
 
+import cards.CardDeck;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -16,11 +18,11 @@ public class UnoJFrame extends JFrame {
     private StatsComponent stats;
     private TableComponent table;
 
-    public UnoJFrame() {
+    public UnoJFrame(CardDeck cardDeck) {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLayout(new GridBagLayout());
         this.setSize(800, 600);
-        this.hand = new HandComponent();
+        this.hand = new HandComponent(cardDeck);
         this.queue = new QueueComponent();
         this.stats = new StatsComponent();
         this.table = new TableComponent();
