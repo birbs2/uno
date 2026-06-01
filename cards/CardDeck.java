@@ -1,7 +1,6 @@
 package cards;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class CardDeck {
 
@@ -46,8 +45,9 @@ public class CardDeck {
         deck = new ArrayList<>(allCardsArrayList);
     }
 
-    public Card getRandomCard() {
+    public Card draw() {
         int seed = (int) (Math.random() * deck.size());
+        System.out.println(deck.get(seed));
         return deck.remove(seed);
     }
 

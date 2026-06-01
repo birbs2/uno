@@ -7,10 +7,12 @@ import java.awt.*;
 
 public class UnoJFrame extends JFrame {
 
-    private static final double HAND_HEIGHT = 0.2;
-    private static final double RULES_WIDTH = 0.1;
-    private static final double STATS_WIDTH = 0.1;
-    private static final double STATS_HEIGHT = 0.1;
+    public static final double HAND_HEIGHT = 0.2;
+    public static final double RULES_WIDTH = 0.1;
+    public static final double STATS_WIDTH = 0.1;
+    public static final double STATS_HEIGHT = 0.1;
+    public static final int WIDTH = 1000;
+    public static final int HEIGHT = 800;
 
     private GameRulesComponent gameRules = new GameRulesComponent();
     private HandComponent hand;
@@ -18,11 +20,12 @@ public class UnoJFrame extends JFrame {
     private StatsComponent stats;
     private TableComponent table;
 
-    public UnoJFrame(CardDeck cardDeck) {
+    public UnoJFrame() {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setResizable(false);
         this.setLayout(new GridBagLayout());
-        this.setSize(800, 600);
-        this.hand = new HandComponent(cardDeck);
+        this.setSize(WIDTH, HEIGHT);
+        this.hand = new HandComponent();
         this.queue = new QueueComponent();
         this.stats = new StatsComponent();
         this.table = new TableComponent();

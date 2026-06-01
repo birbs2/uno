@@ -34,4 +34,9 @@ public class Card {
         ImageIcon icon = new ImageIcon("assets/" + this.toString() + ".png");
         return new ImageIcon(icon.getImage().getScaledInstance(width, height, Image.SCALE_SMOOTH));
     }
+
+    public ImageIcon getIcon(int height) {
+        ImageIcon icon = new ImageIcon("assets/" + this.toString() + ".png");
+        return new ImageIcon(icon.getImage().getScaledInstance((int) (height * (2.0 / 3)), height, Image.SCALE_SMOOTH));
+    }
 }
